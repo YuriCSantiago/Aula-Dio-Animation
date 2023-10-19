@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Braah+One&family=Bungee&family=Open+Sans:ital,wght@0,300;0,500;1,300;1,600&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Braah+One&family=Bungee&family=Open+Sans:ital,wght@0,300;0,500;1,300;1,600&family=Pacifico&family=Quicksand&display=swap');
+
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(-45deg, #d53369, #daae51);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite alternate;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    position: relative;
+    bottom: 30px;
+}
+
+.gradient-word {
+    font-family: 'Pacifico', cursive;
+    margin: 0;
+    font-size: 3.5rem;
+ /*   line-height: 1.5; /*Deixar mais proximo a palavra de cima */
+
+    background: linear-gradient(0deg, transparent, rgba(24, 24, 24, .4));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;/*0% no eixo X e 50% no eixo Y*/
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

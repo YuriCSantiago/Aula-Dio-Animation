@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    background: rgb(7, 164, 191);
+    animation-name: exemplo;
+    animation-duration: 2s;
+/*    animation-delay: 1s; /*Quanto tempo vai demorar para animaçao começar*/
+/*    animation-iteration-count: 3; /*quantas vezes a animaçao vai se repetir*/
+    animation-iteration-count: infinite; /*vai ficar se repetindo*/
+    animation-direction: alternate-reverse; /*Roxo azul verde -> azul roxo*/
+    animation-timing-function: ease-in-out;
+
+/*       (5s)duration / timing-function (linear) / (2s Delay) / interation-count (infinite) / direction (alternate) */
+    animation: exemplo 5s linear 2s infinite alternate; /*todas configs acima em uma linha*/
+}
+
+.box:hover {
+    animation-play-state: paused; /*pausa animação quando coloca mouse em cima*/
+}
+
+@keyframes exemplo {
+    0% {
+        background: palegreen;
+        height: 200px;
+    }
+
+    50% {
+        background: darkblue;
+        width: 200px;
+        height: 300px;
+    }
+
+    100% {
+        background: purple;
+        width: 100px;
+        height: 200px;
+    }
+}

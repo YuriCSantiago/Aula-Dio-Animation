@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(247, 247, 247);
+
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    perspective: 300px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    position: absolute;
+    background: #d53369;
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+    transition: background 1s linear, transform 1.5s ease-in-out 1s;/*1s de quanto tempo vai demorar para começar a transition*/
+}
+
+.box:hover {
+    background-color: rgb(190, 164, 21);
+    transform: rotateX(40deg);
+}
+
+/*  transition: shorthand
+    > transition-delay
+    > transition-duration
+    > transition-property
+    > transition-timing-function
+*/
+
+/*
+    transition: <property> <duration> <timing-function> <delay>
+*/
+
+/*
+    ease
+    linear
+    ease-in
+    ease-out
+    ease-in-out
+    cubic-buzier(n, n, n, n)
+*/

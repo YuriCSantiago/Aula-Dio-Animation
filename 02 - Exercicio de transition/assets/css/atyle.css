@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(247, 247, 247);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    background-color: rgb(80, 80, 203);
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 20px 20px 10px lightgray;
+}
+
+.list li {
+    list-style: none;
+    color: white;
+    font-weight: bold;
+    padding: 12px 32px;
+    margin-bottom: 4px;
+    transition: background .8s;
+}
+
+.list li:hover {
+    background-color: blue;
+}
+
+.list input {
+    accent-color: rgb(1, 194, 1);
+}
+
+.list input:checked + span {
+    text-decoration: line-through;
+}
+
+.list li:has(input:checked) { /*se dentro do li tiver um input checked muda a cor do fundo*/
+    background: #f0ab1a;
+    color: blue;
+    border-radius: 4px;
+}
